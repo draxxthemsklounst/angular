@@ -20,4 +20,14 @@
 
 <p>{{ serverCreationStatus }}</p>
 
-<app-server></app-server>
+
+
+<input type="text"
+        class = "form-control"
+        [(ngModel)] = "username">
+
+<button class="btn btn-primary"
+        [disabled] = "username === ''"
+        (click) = "onCreateUsername()">Reset Username</button>
+
+<p>{{userNameStatus}}</p>
